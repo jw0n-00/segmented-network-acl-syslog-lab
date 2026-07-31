@@ -2,8 +2,6 @@
 
 Cisco Packet Tracer project. Three departments (Guest, IT, Sales) share the same physical switches and router, but only get the network access they're supposed to have. Guest traffic is locked down with an extended ACL, VLANs keep the departments logically separated, and the router ships its logs to a central syslog server.
 
-![Full network topology](screenshots/topology.png)
-
 ## Summary
 
 - 2 switches, 1 router, 6 PCs, 1 server
@@ -25,20 +23,7 @@ Cisco Packet Tracer project. Three departments (Guest, IT, Sales) share the same
 
 ## Topology
 
-```
-[guest device]--VLAN99--[Switch0]-------trunk (VLAN10 + VLAN99)-------[Router]
-[PC1]-----------VLAN10--[        ]      Gig0/0.10  192.168.10.1
-[PC2]-----------VLAN10--[        ]      Gig0/0.99  192.168.99.1
-                                                        |
-                                                  Gig0/1  192.168.20.1
-                                                  (single VLAN, plain access link)
-                                                        |
-                                                   [Switch1]
-                                     [PC3]--------------[        ]
-                                     [PC4]--------------[        ]
-                                     [PC5]--------------[        ]
-                                     [Server]------------[        ]
-```
+![Full network topology](screenshots/topology.png)
 
 ## IP Addressing
 
